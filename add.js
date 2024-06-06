@@ -3,8 +3,6 @@ let action = ['ate', 'peed', 'crushed', 'broke'];
 let what = ['my homework', 'my phone', 'the car'];
 let when = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'];
  
-
-
 function generadorExcusas() {
    let randomWhoIndex = Math.floor(Math.random() * who.length);
    let randomActionIndex = Math.floor(Math.random() * action.length);
@@ -17,11 +15,13 @@ function generadorExcusas() {
    let randomWhen = when[randomWhenIndex];
 
    return randomWho + ' ' + randomAction + ' ' + randomWhat + ' ' + randomWhen;
-   
+}
+   function mostrarExcusa() {
+      let excuse = generadorExcusas();
+      document.getElementById('excuse').innerText = excuse;
 }
 
-
-console.log(generadorExcusas());
+window.onload = mostrarExcusa;
 
 
 
